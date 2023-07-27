@@ -1,0 +1,37 @@
+#headerBar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  ion-icon{
+    
+    font-size: 2rem;
+  }
+  ion-title{
+    text-align: center;
+    color: #5bb2be;
+  }
+}
+
+#mainContainer{
+  padding: 2rem;
+  h1{
+    font-weight: bolder;
+  }
+  h2{
+    font-size: 1.2rem;
+    color: #97969c;
+  }
+  .input-group{
+    span{
+      background-color: white;
+      border-color: #b4b6b8;
+      border-right: none;
+    }
+    .form-control{
+      padding-left: 0;
+      border-left: none;
+      border-color: #b4b6b8;
+      box-shadow: none; 
+    }
+  }
+}

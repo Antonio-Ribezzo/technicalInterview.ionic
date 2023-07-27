@@ -1,0 +1,7 @@
+{
+  "name": "city-map",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <div id="headerBar">
+      <ion-icon name="chevron-back-outline"></ion-icon>
+      <ion-title> Cerco una stanza </ion-title>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div id="mainContainer">
+    <h1>In quale città?</h1>
+    <h2>Indicaci la città in cui ricerchi il tuo prossimo alloggio</h2>
+  
+    <div class="my-3 input-group">
+      <span class="input-group-text" id="basic-addon1">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </span>
+      <input type="text" class="form-control" (keydown.enter)="$event.preventDefault()" placeholder="Cerca"
+        type="text" #search />
+    </div>
+  
+    <google-map #myGoogleMap height="430px" width="100%" [zoom]="zoom" [center]="center" [options]="options">
+  
+      <map-marker #markerElem="mapMarker" *ngFor="let marker of markers" [position]="marker.position"
+        [label]="marker.label" [title]="marker.title" [options]="marker.options">
+      </map-marker>
+    </google-map>
+  </div>
+</ion-content>
